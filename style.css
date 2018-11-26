@@ -7,9 +7,6 @@ p, h1, h2, h3, h4, h5, h6 {
     margin:0;
 }
 
-.produtos, .sobre_contato, .desenvolvimento  {
-    min-height:100vh;
-}
 
 .bg {
     position: fixed;
@@ -68,7 +65,7 @@ p, h1, h2, h3, h4, h5, h6 {
 header {
     display: flex;
     width: 95%;
-    border-radius: 0 0 5vh 0;
+    border-radius: 0 0 9vh 0;
     height: 23.6vh;
     background: teal;
     position: fixed;
@@ -106,9 +103,9 @@ header {
 
 .h1_container {
     height: 100%;
-    width: 55%;
     position: relative;
-    left: calc(16vw - 10vh);
+    padding-left: 10%;
+    min-width: 80%;
     display: inline-flex;
 }
 
@@ -116,6 +113,7 @@ header {
     height: 70%;
     position: relative;
     top: 14%;
+    opacity: 0.9;
 }
 
 .h1_container h1 {
@@ -129,11 +127,11 @@ header {
     font-size: 4.2vh;
     line-height: 6vh;
     cursor: default;
-    transition:0.3s ease;
-    -webkit-transition:0.3s ease;
-    -moz-transition:0.3s ease;
-    -ms-transition:0.3s ease;
-    -o-transition:0.3s ease;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
 }
 
 .h1_container h1 span {
@@ -149,8 +147,8 @@ header {
 .header_contact_container {
     display: inline-block;
     height: 50%;
-    width: 40%;
-    position: relative;
+    position: absolute;
+    right: 5%;
     top: 5vh;
     transition:0.3s ease;
     -webkit-transition:0.3s ease;
@@ -173,7 +171,7 @@ header {
     -o-transition:0.3s ease;
 }
 
-.header_contact_container span:first-child {
+.header_contact_container > span:first-child {
     font-weight: 500;
     font-size: 4vh;
 }
@@ -201,7 +199,7 @@ header {
 .intro h3 {
     margin-top: 4vh;
     font-weight: 300;
-    width: 52%;
+    width: calc(72% - 200px);
     cursor: default;
     font-size: 3.4vh;
     color: #5D8F8F;
@@ -221,7 +219,7 @@ header {
 
 .about_button, .see_products {
     position: absolute;
-    right: 30vh;
+    right: 12vw;
     box-shadow: inset 0 0 0 0.3vh teal;
     font-size: 3vh;
     height: 6vh;
@@ -231,7 +229,7 @@ header {
 
 .about_button {
     top: 68vh;
-    width: 30vh;
+    width: 15vw;
     text-align: center;
     transition:0.2s ease;
     -webkit-transition:0.2s ease;
@@ -247,7 +245,7 @@ header {
 
 .see_products {
     top: 78vh;
-    padding: 0 3vh;
+    padding: 0 2vw;
     transition: 0.2s ease;
     -webkit-transition: 0.2s ease;
     -moz-transition: 0.2s ease;
@@ -279,18 +277,18 @@ header {
 .product_img_container {
     position: relative;
     height: 100%;
-    width: 20%;
+    width: calc(20vh + 10vw);
     display: inline-block;
     margin: 0 4%;
 }
 
     .product_img_container img {
-        height: 75%;
-        width: 65%;
+        height: 70%;
+        width: 26vh;
         margin: 0 auto;
         display: block;
         position: relative;
-        top: 12%;
+        top: 20%;
     }
 
 .product_info_container {
@@ -302,13 +300,14 @@ header {
 }
 
     .product_info_container h3 {
-        font-size: 6.2vh;
+        font-size: calc(1vw + 4.5vh);
         font-weight: 400;
         display: inline-block;
         text-shadow: 0 0.5vh #EEE;
+        padding-right: 2vh;
     }
     .product_info_container h4 {
-        font-size: 7vh;
+        font-size: calc(2.8vw + 4px);
         font-weight: 300;
         color: inherit;
         margin: 2vh 0 3vh 0;
@@ -318,24 +317,22 @@ header {
         color: inherit;
         margin: 0 3vh 1vh 0;
         display: inline-block;
-        font-size: 3vh;
+        font-size: calc(0.5vw + 10px);
         background: white;
         text-decoration: none;
-        padding: 1.5vh 6vh;
+        padding: 1.5vh 2vw;
         box-sizing: border-box;
-        /* border-radius: 60px; */
         transition: 0.3s ease;
         -webkit-transition: 0.3s ease;
         -moz-transition: 0.3s ease;
         -ms-transition: 0.3s ease;
-        -o-transition: 0.3s ease;
-    }
+        -o-transition: 0.3s ease;}
 
     .product_info_container span {
         display: block;
-        letter-spacing: 0.3vh;
+        letter-spacing: 0.2vw;
         color: inherit;
-        font-size: 2.5vh;
+        font-size: calc(0.6vw + 6px);
         padding-bottom: 1vh;
         margin-bottom: 1vh;
         border-bottom: 0.2vh dashed;
@@ -357,26 +354,37 @@ header {
 
     .desenvolvimento {
         width: 100%;
-        padding: 0 4vw;
+        padding: 0 4vw 20vh 4vw;
         box-sizing: border-box;
         overflow: hidden;
         position: relative;
     }
 
-    .desenvolvimento * {
-        cursor: default;
+
+
+    .sec_titulo, .sec_subtitulo {
+        color: teal;
+        display: block;
     }
-
-
 
     .sec_titulo {
-        font-size: 9vh;
-        color: teal;
-        margin: 0 0 4vh 0;
+        font-size: calc(3.5vw + 6px);
         padding-top: 6vh;
-        display: block;
         font-weight: 300;
+        display: inline-block;
+        margin-right: 7vh;
     }
+
+    .sec_subtitulo {
+        font-size: 3vh;
+        font-weight: 400;
+        line-height: 5vh;
+        padding: 2vh 4vh;
+        margin: 7vh 0;
+        display: inline-block;
+        background: #FFF;
+    }
+
     
     .p1 {
         font-size: 4vh;
@@ -389,9 +397,9 @@ header {
     }
 
     .p0 {
-        font-size: 6vh;
+        font-size: calc(2vw + 9px);
         font-weight: 300;
-        margin: 0 8vh 4vh 0;
+        margin: 4vh 8vh 0 0;
         display: inline-block;
     }
 
@@ -404,8 +412,10 @@ header {
     }
 
     .p2 {
-        font-size: 4vh;
+        font-size: calc(1.5vw + 6px);
         font-weight: 300;
+        margin-top: 4vh;
+        margin-bottom: 4vh;
     }
 
     .sobre_contato iframe {
@@ -414,7 +424,7 @@ header {
         background: rgba(0, 0, 0, 0.1);
         box-sizing: border-box;
         height: 68vh;
-        margin: 0 auto;
+        margin: 4vh auto;
         display: block;
     }
 
@@ -424,56 +434,188 @@ header {
 
     .side_gif {
         width: 48%;
-        box-shadow: 0 2vh 8vh rgba(0,0,0,0.3);
-        margin: 5vh 0;
+        box-shadow: 0 2vh 5vh rgba(0,0,0,0.3);
         float: right;
         position: absolute;
         right: -8%;
+        bottom: calc(330px - 20vw);
     }
 
 
     .sobre_contato form {
-        margin: 10vh 0;
+        margin-bottom: 10vh;
     }
 
     .normal_input, .sobre_contato form textarea {
         display: block;
         width: 62%;
-        margin: 3vh auto 3vh auto;
+        margin: 0 0 3vh 0;
         padding: 2.5vh 3vh;
         text-align: left;
         font-size: 2.5vh;
         box-sizing: border-box;
         border: 1vh solid white;
         font-family: 'Roboto';
+        border: 0.4vh solid teal;
+        background: none;
+        transition:0.4s ease;
+        -webkit-transition:0.4s ease;
+        -moz-transition:0.4s ease;
+        -ms-transition:0.4s ease;
+        -o-transition:0.4s ease;
+        color: teal;
     }
+
+    .normal_input:focus, .sobre_contato form textarea:focus {
+        background:white;
+        outline:none;
+    }
+
+    .normal_input {
+        display: inline-block;
+        width: 49%;
+    }
+
+    .left_input {
+        margin-right: 1%;
+    }
+
 
     .sobre_contato form textarea {
+        min-height: 25vh;
         height: 25vh;
-    }
-
-    .send {
-        cursor: pointer;
-        border: 0.5vh solid teal;
-        background: none;
-        width: 62%;
-        padding: 2vh 3vh;
-        margin: 0 auto;
-        display: block;
-        font-size: 5vh;
-        color: teal;
-        transition:0.2s ease;
-        -webkit-transition:0.2s ease;
-        -moz-transition:0.2s ease;
-        -ms-transition:0.2s ease;
-        -o-transition:0.2s ease;
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+        max-height: 75vh;
+        transition:background 0.3s ease;
+        -webkit-transition:background 0.3s ease;
+        -moz-transition:background 0.3s ease;
+        -ms-transition:background 0.3s ease;
+        -o-transition:background 0.3s ease;
 }
 
-    .send:hover {
+    .send {
+        font-weight: 300 !important;
+        font-family: 'Roboto';
+        cursor: pointer;
+        background: none;
+        width: 100%;
+        padding: 2vh 10%;
+        display: block;
+        font-size: 5vh;
         background: teal;
         color: white;
+        text-align: right;
+        transition: background 0.3s ease,padding 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        -webkit-transition: background 0.3s ease,padding 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        -moz-transition: background 0.3s ease,padding 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        -ms-transition: background 0.3s ease,padding 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        -o-transition: background 0.3s ease,padding 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        border: none;
+}
+
+    .send:active {
+        padding: 2vh 25%;
+        transition:background 0.3s ease,padding 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+        -webkit-transition:background 0.3s ease,padding 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+        -moz-transition:background 0.3s ease,padding 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+        -ms-transition:background 0.3s ease,padding 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+        -o-transition:background 0.3s ease,padding 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+    ::placeholder {
+        color:#899;
     }
 
+    .send:hover {
+        background: #005353;
+    }
+
+    .go_to_email_button {
+        margin-right: 2vh;
+        color: white;
+        font-size: calc(0.5vw + 12px);
+        background: teal;
+        padding: 1vh 3vh;
+        font-weight: 300;
+        cursor: pointer;
+        display: inline-block;
+        box-shadow: 0 0.8vh #005454;
+        border-radius: 3px;
+        transition: 0.15s ease;
+        -webkit-transition: 0.15s ease;
+        -moz-transition: 0.15s ease;
+        -ms-transition: 0.15s ease;
+        -o-transition: 0.15s ease;
+    }
+
+    .go_to_email_button:hover {
+        box-shadow: 0 0 #005454;
+        transform:translateY(0.8vh);
+        -webkit-transform:translateY(0.8vh);
+        -moz-transform:translateY(0.8vh);
+        -ms-transform:translateY(0.8vh);
+        -o-transform:translateY(0.8vh);
+    }
+
+    .or_call {
+        color:teal;
+        font-size: 3vh;
+    }
+
+    .dev_call {
+        font-size: calc(0.5vw + 12px);
+    }
+
+    .or_call:hover {
+        opacity: 0.6;
+    }
+
+    .big_img {
+        width: 85%;
+        margin: 8vh auto;
+        display: block;
+    }
+
+    .whatsapp_button {
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .youtube_button {
+        position: absolute;
+        right: calc(31vw - 31px);
+        bottom: calc(330px - 20vw);
+        padding: 1vh 3vh;
+        background: linear-gradient(30deg, #b31217, #EE4D52);
+        border-radius: 1vh;
+        display: block;
+        float: right;
+        width: 10vw;
+        height: 4vw;
+        transition: 0.2s ease;
+        -webkit-transition: 0.2s ease;
+        -moz-transition: 0.2s ease;
+        -ms-transition: 0.2s ease;
+        -o-transition: 0.2s ease;
+    }
+
+    .youtube_button:hover {
+        transform:scale(1.05);
+        -webkit-transform:scale(1.05);
+        -moz-transform:scale(1.05);
+        -ms-transform:scale(1.05);
+        -o-transform:scale(1.05);
+}
+
+    .youtube_button img {
+        width: 100%;
+        position: relative;
+        height: 100%;
+        margin: 0 auto;
+        display: block;
+    }
 
 
 
@@ -509,8 +651,15 @@ header {
     background: rgba(214, 0, 87, 0.15);
 }
 
+/* SCROLLBAR */
 
-
+::-webkit-scrollbar {
+    width: 10px;
+    /* background: #458E75; */
+}
+::-webkit-scrollbar-thumb {
+    background: teal;
+}
 
 
 

@@ -21,3 +21,29 @@ document.body.onscroll = function() {
     }
 }
 
+
+const aboutButton = document.querySelector('#aboutButton');
+const aboutAnchor = document.querySelector('#about_anchor');
+
+aboutButton.addEventListener('click', function() {
+    window.scrollTo({top:(aboutAnchor.offsetTop - (window.innerHeight / 7)), behavior:'smooth'})
+})
+
+
+const productButton = document.querySelector('.see_products');
+const productAnchor = document.querySelector('.product_anchor');
+
+
+productButton.addEventListener('click', function() {
+    window.scrollTo({top:(productAnchor.offsetTop - (window.innerHeight / 7)), behavior:'smooth'})
+})
+
+
+const goToMail = document.querySelector('#goToMail');
+const mailArea = document.querySelector('#mailArea')
+
+function goToMailArea() {
+    window.scrollTo({top:mailArea.offsetTop - (window.innerHeight /7), behavior:'smooth'})
+}
+
+goToMail.addEventListener('click', goToMailArea)
