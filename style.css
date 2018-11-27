@@ -24,7 +24,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .bg1 {
     background-image: url(assets/bg.svg);
     background-size: 25vh;
-    opacity: 0.1;
+    opacity: 0.3;
 }
 
 .bg2 {
@@ -38,11 +38,10 @@ p, h1, h2, h3, h4, h5, h6 {
     position: absolute;
     background-image: url(assets/dev.gif);
     background-size: cover;
-    opacity: 0.3;
+    opacity: 0.15;
     width: 100%;
     top: 0;
     background-attachment: fixed;
-    filter: blur(1vh);
 }
 
 .intro {
@@ -229,6 +228,7 @@ header {
     height: 6vh;
     line-height: 6vh;
     cursor: pointer;
+    clip-path: polygon(0% 0%, calc(100% - 2vh) 0%, 100% 2vh, 100% 500%, 0% 500%);
 }
 
 .about_button {
@@ -296,7 +296,7 @@ header {
     }
 
 .product_info_container {
-    width: 64%;
+    width: 62%;
     position: relative;
     top: 10%;
     height: auto;
@@ -317,20 +317,27 @@ header {
         margin: 2vh 0 3vh 0;
         text-shadow: 0 0.6vh 0.8vh #FFF;
     }
-    .product_info_container a {
+    
+    .product_info_container h4 strong {
+        font-weight: 400;
+    }
+
+    .product_info_container a, .fixed_exit_bt {
+        position: relative;
         color: inherit;
-        margin: 0 3vh 1vh 0;
         display: inline-block;
         font-size: calc(0.5vw + 10px);
         background: white;
         text-decoration: none;
-        padding: 1.5vh 2vw;
+        padding: 1.5vh 3vw;
         box-sizing: border-box;
         transition: 0.3s ease;
         -webkit-transition: 0.3s ease;
         -moz-transition: 0.3s ease;
         -ms-transition: 0.3s ease;
-        -o-transition: 0.3s ease;}
+        -o-transition: 0.3s ease;
+    }
+
 
     .product_info_container span {
         display: block;
@@ -344,8 +351,8 @@ header {
         display: inline-block;
     }
 
-    .product_info_container a:hover {
-        box-shadow: 0 0 0 0.3vh;
+    .product_info_container a:hover, .fixed_exit_bt:hover {
+        box-shadow: inset 0 0 0 0.2vh;
     }
 
     .sobre_contato, .desenvolvimento {
@@ -358,7 +365,7 @@ header {
 
     .desenvolvimento {
         width: 100%;
-        padding: 0 4vw 20vh 4vw;
+        padding: 0 4vw 0 4vw;
         box-sizing: border-box;
         overflow: hidden;
         position: relative;
@@ -396,7 +403,6 @@ header {
     }
 
     p {
-        color: teal;
         font-weight: 300;
     }
 
@@ -442,7 +448,7 @@ header {
         float: right;
         position: absolute;
         right: -8%;
-        top: calc(8vw + 8vh);
+        top: calc(7vw + 7vh);
     }
 
 
@@ -538,6 +544,7 @@ header {
 
     .go_to_email_button {
         margin-right: 2vh;
+        margin-bottom: 7vw;
         color: white;
         font-size: calc(0.5vw + 11px);
         background: teal;
@@ -590,7 +597,7 @@ header {
     .youtube_button {
         position: absolute;
         right: calc(31vw - 31px);
-        top: calc(8vw + 8vh);
+        top: calc(20vw + 22vh);
         padding: 1vh 3vh;
         background: linear-gradient(30deg, #b31217, #EE4D52);
         border-radius: 1vh;
@@ -621,10 +628,34 @@ header {
         display: block;
     }
 
+    .free_download::after {
+        content: url(assets/download_bt.svg);
+        position: absolute;
+        width: 1.2vw;
+        display: inline-block;
+        left: 1vw;
+        top: 30%;
+    }
 
+    .credit_box {
+        width:100%;
+        display:flex;
+        margin: 9vh 0;
+    }
+    
+    .credit_box > div {
+        background: rgba(0, 128, 128, 0.1);
+        color: teal;
+        display: inline-block;
+        width: 50%;
+        padding: 8vh;
+        font-size: 3.5vh;
+        font-weight: 400;
+    }
 
-
-
+    .credit_box > div:first-child {
+        margin-right: 3%;
+    }
 
 
 
@@ -730,12 +761,12 @@ header {
 
     .intro h2 {
         text-align: left;
-        font-size: 4.3vh;
+        font-size: 5.4vw;
     }
 
     .intro h3 {
         text-align: right;
-        font-size: 3.2vh;
+        font-size: 4vw;
     }
 
     .intro {
@@ -767,7 +798,6 @@ header {
     .product_info_container h4 {
         font-size: 5vh;
     }
-
     .product_info_container h3 {
         font-size: 5vh;
         padding-right: unset;

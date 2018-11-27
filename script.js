@@ -5,7 +5,6 @@ const headerContactContainer = document.querySelector('.header_contact_container
 const headerContactContainerSpan = document.querySelector('.header_contact_container span:first-child')
 
 document.body.onscroll = function() {
-    console.log(window.pageYOffset)
     if(window.pageYOffset > (window.innerHeight / 3)) {
         header.classList.add('header_shrink')
         h1.classList.add('h1_shrink')
@@ -47,3 +46,4 @@ function goToMailArea() {
 }
 
 goToMail.addEventListener('click', goToMailArea)
+
