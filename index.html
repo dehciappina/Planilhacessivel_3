@@ -9,6 +9,7 @@
     <meta name="keywords" content="planilhas financeiras, planilhas grátis, modelo de recibo, modelos de planilha, modelo de nota de débito, planilha de controle financeiro, planilha de fluxo de caixa, planilha de contas a pagar, curso excel avançado, planilha de cálculos financeiros"/>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <script type="text/javascript" src="https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.lightbox.js" defer></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon"/>
 </head>
@@ -55,8 +56,17 @@
 
                 <h4>Para todos que buscam uma boa gestão financeira pessoal e empresarial.</h4>
 
-                <a href="#" style="border-color:#008080;">saiba mais</a>
-                <a download href="downloads/Programa de Controle Financeiro - Versão Gratuita.xlsm" style="border-color:#008080; color:#ffffff; background:#008080;" title="Clique para fazer download direto">Teste gratuitamente</a>
+                <a id="buy_pcf" href="#" style="border-color:#008080;">saiba mais</a>
+                <a id="pcf_dg" download href="downloads/Programa de Controle Financeiro - Versão Gratuita.xlsm" style="border-color:#008080; color:#ffffff; background:#008080;" title="Clique para fazer download direto">Teste gratuitamente</a>
+
+                <!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
+<form action="https://pagseguro.uol.com.br/checkout/v2/payment.html" method="post" onsubmit="PagSeguroLightbox(this); return false;">
+    <!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+    <input type="hidden" name="code" value="A4446A32BEBE7E2EE4BECFB1F8BC8B96" />
+    <input type="hidden" name="iot" value="button" />
+    <input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-comprar-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
+    </form>
+    <!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
 
             </div>
         </article>
@@ -75,7 +85,7 @@
                 <h4>Saiba o valor líquido a receber e o custo efetivo da operação com ou sem IOF.</h4>
 
                 <a href="#" style="border-color:#ff4500;">saiba mais</a>
-                <a download href="downloads/Planilha de Cálculo Antecipacao Recebíveis - Versão Gratuita.xlsm" style="border-color:#ff4500; color:#ffffff; background:#ff4500;" title="Clique para fazer download direto">Teste gratuitamente</a>
+                <a id="car_dg" download href="downloads/Planilha de Cálculo Antecipacao Recebíveis - Versão Gratuita.xlsm" style="border-color:#ff4500; color:#ffffff; background:#ff4500;" title="Clique para fazer download direto">Teste gratuitamente</a>
             </div>
         </article>
         
@@ -92,7 +102,7 @@
                 <h4>Exibe o fluxo financeiro da operação e calcula seu custo efetivo.</h4>
 
                 <a href="#" style="border-color:#675dc6;">saiba mais</a>
-                <a download href="downloads/Planilha de Análise de Operações de Consórcio - Versão Gratuita.xlsm" style="border-color:#675dc6; color:#ffffff; background:#675dc6;" title="Clique para fazer download direto">Teste gratuitamente</a>
+                <a id="oc_dg" download href="downloads/Planilha de Análise de Operações de Consórcio - Versão Gratuita.xlsm" style="border-color:#675dc6; color:#ffffff; background:#675dc6;" title="Clique para fazer download direto">Teste gratuitamente</a>
             </div>
         </article>
         
@@ -109,7 +119,7 @@
                 <h4>Calcula o valor do principal, parcela, taxa e monta o fluxo da operação.</h4>
 
                 <a href="#" style="border-color:#ffb839;">saiba mais</a>
-                <a download href="downloads/Planilha de Análise de Operações de Empréstimo - Versão Gratuita.xlsm" href="#" style="border-color:#ffb839; color:#ffffff; background:#ffb839;" title="Clique para fazer download direto">Teste gratuitamente</a>
+                <a id="aef_dg" download href="downloads/Planilha de Análise de Operações de Empréstimo - Versão Gratuita.xlsm" href="#" style="border-color:#ffb839; color:#ffffff; background:#ffb839;" title="Clique para fazer download direto">Teste gratuitamente</a>
             </div>
         </article>
 
@@ -126,7 +136,7 @@
                 <h4>Gera RPAs para impressão, permitindo reaproveitamento para novos registros.</h4>
 
                 <a href="#" style="border-color:#B83500;">saiba mais</a>
-                <a download href="downloads/Programa Emissor de RPA - Versão Gratuita.xlsm" style="border-color:#B83500; color:#ffffff; background:#B83500;" title="Clique para fazer download direto">Teste gratuitamente</a>
+                <a id="per_dg" download href="downloads/Programa Emissor de RPA - Versão Gratuita.xlsm" style="border-color:#B83500; color:#ffffff; background:#B83500;" title="Clique para fazer download direto">Teste gratuitamente</a>
             </div>
         </article>
         
@@ -143,7 +153,7 @@
                 <h4>Ferramenta completa para análise comparativa entre os regimes tributários.</h4>
 
                 <a href="#" style="border-color:forestgreen;">saiba mais</a>
-                <a download href="downloads/Planilha de Análise Lucro Real x Lucro Presumido - Versão Gratuita.xlsm" style="border-color:forestgreen; color:#ffffff; background:forestgreen;" title="Clique para fazer download direto">Teste gratuitamente</a>
+                <a id="lrlp_dg" download href="downloads/Planilha de Análise Lucro Real x Lucro Presumido - Versão Gratuita.xlsm" style="border-color:forestgreen; color:#ffffff; background:forestgreen;" title="Clique para fazer download direto">Teste gratuitamente</a>
             </div>
         </article>
         
@@ -160,7 +170,7 @@
                 <h4>Didática - Calcula PV, FV, i e M, montando o fluxo financeiro da operação.</h4>
 
                 <a href="#" style="border-color:deepskyblue;">saiba mais</a>
-                <a download href="downloads/Planilha Calculadora Financeira Analítica - Versão Gratuita.xlsm" style="border-color:deepskyblue; color:#ffffff; background:deepskyblue;" title="Clique para fazer download direto">Teste gratuitamente</a>
+                <a id="cfa_dg" download href="downloads/Planilha Calculadora Financeira Analítica - Versão Gratuita.xlsm" style="border-color:deepskyblue; color:#ffffff; background:deepskyblue;" title="Clique para fazer download direto">Teste gratuitamente</a>
             </div>
         </article>
         
@@ -177,7 +187,7 @@
                 <h4>Gera recibos para impressão, com reaproveitamento para novos registros.</h4>
 
                 <a href="#" style="border-color:#d60057;">saiba mais</a>
-                <a download href="downloads/Programa Emissor de Recibo com Logo - Versão Gratuita.xlsm" style="border-color:#d60057; color:#ffffff; background:#d60057;" title="Clique para fazer download direto">Teste gratuitamente</a>
+                <a id="perl_dg" download href="downloads/Programa Emissor de Recibo com Logo - Versão Gratuita.xlsm" style="border-color:#d60057; color:#ffffff; background:#d60057;" title="Clique para fazer download direto">Teste gratuitamente</a>
             </div>
         </article>
     </section>
@@ -201,6 +211,10 @@
         <a href="https://wa.me/5511982678183" target="_blank" class="whatsapp_button" title="Clique para chamar pelo Whatsapp!" target="_blank">
             <span class="or_call dev_call">ou ligar para (11) 9 8267-8183</span>
         </a>
+
+        <p class="p2">
+            Buscamos contribuir para que interessados e profissionais de áreas administrativas e financeiras aumentem sua produtividade por meio de planilhas práticas, confiáveis e orientadas à solução para diferentes cenários.
+        </p>
 
     </section>
 

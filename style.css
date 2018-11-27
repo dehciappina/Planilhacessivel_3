@@ -442,7 +442,7 @@ header {
         float: right;
         position: absolute;
         right: -8%;
-        bottom: calc(330px - 20vw);
+        top: calc(8vw + 8vh);
     }
 
 
@@ -590,7 +590,7 @@ header {
     .youtube_button {
         position: absolute;
         right: calc(31vw - 31px);
-        bottom: calc(330px - 20vw);
+        top: calc(8vw + 8vh);
         padding: 1vh 3vh;
         background: linear-gradient(30deg, #b31217, #EE4D52);
         border-radius: 1vh;
