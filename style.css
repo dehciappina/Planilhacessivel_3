@@ -1,3 +1,7 @@
+html {
+    width: 100%;
+}
+
 body {
     margin:0;
     font-family: 'Roboto', sans-serif;
@@ -67,7 +71,7 @@ header {
     width: 95%;
     border-radius: 0 0 9vh 0;
     height: 23.6vh;
-    background: teal;
+    background: linear-gradient(178deg, teal, #37B7B7);
     position: fixed;
     top: 0;
     overflow: hidden;
@@ -224,7 +228,7 @@ header {
     font-size: 3vh;
     height: 6vh;
     line-height: 6vh;
-    cursor: pointer;s
+    cursor: pointer;
 }
 
 .about_button {
@@ -535,9 +539,9 @@ header {
     .go_to_email_button {
         margin-right: 2vh;
         color: white;
-        font-size: calc(0.5vw + 12px);
+        font-size: calc(0.5vw + 11px);
         background: teal;
-        padding: 1vh 3vh;
+        padding: 1.5vh 3vh;
         font-weight: 300;
         cursor: pointer;
         display: inline-block;
@@ -664,3 +668,237 @@ header {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 150vh) { 
+
+    .header_contact_container {
+        display:none;
+    }
+}
+
+
+
+
+@media screen and (max-width: 90vh) { 
+
+    .planilha {
+        height: auto;
+        display: block;
+        padding: 6vh 0;
+    }
+
+    .product_img_container {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .right_gradient {
+        display: none;
+    }
+
+    .intro h2, .intro h3 {
+        width: 100%;
+        font-weight: 300;
+        margin: 3vh 0 5vh 0;
+        color: teal;
+        padding: 0 5vh;
+        box-sizing: border-box;
+    }
+
+    .intro h2 {
+        text-align: left;
+        font-size: 4.3vh;
+    }
+
+    .intro h3 {
+        text-align: right;
+        font-size: 3.2vh;
+    }
+
+    .intro {
+        height: auto;
+        padding-bottom: 5vh;
+    }
+
+    .about_button, .see_products {
+        position: relative;
+        top: 0;
+        display: block;
+        margin: 2vh auto;
+        right: unset;
+        width: 60%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .see_products::after {
+        display:none;
+    }
+
+    .product_info_container {
+        width: 95%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .product_info_container h4 {
+        font-size: 5vh;
+    }
+
+    .product_info_container h3 {
+        font-size: 5vh;
+        padding-right: unset;
+    }
+
+    .product_info_container a {
+        margin: 0 auto 3vh auto;
+        font-size: 3vh;
+        padding: 1.5vh 4vw;
+    }
+
+    .h1_container img {
+        height: 50%;
+        top: 25%;
+    }
+
+    .h1_container h1 span {
+        font-size: 4.8vh;
+    }
+
+    .h1_container h1 {
+        font-size: 2.4vh;
+        line-height: 4vh;
+        top: 4vh;
+        left: 2vh;
+        font-weight: 300;
+    }
+
+    header {
+        display: flex;
+        width: 100%;
+        border-radius: 0;
+        height: 14.6vh;
+    }
+
+    .h1_container {
+        padding-left: 5%;
+    }
+
+    .intro h2 {
+        margin: 18vh 0 10vh 0;
+    }
+
+    .side_gif {
+        width: 68%;
+        float: none;
+        position: relative;
+        bottom: unset;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 3vh auto;
+        display: block;
+    }
+
+    .sec_titulo {
+        text-align: center;
+        margin: 0;
+        font-size: 5.5vh;
+    }
+
+    .youtube_button {
+        position: relative;
+        margin: 0 auto -10vh;
+        right: unset;
+        bottom: 0;
+        transform: translateY(-100%) scale(1);
+        float: none;
+        width: 21vh;
+        height: 8vh;
+        -webkit-transform: translateY(-100%) scale(1);
+        -moz-transform: translateY(-100%) scale(1);
+        -ms-transform: translateY(-100%) scale(1);
+        -o-transform: translateY(-100%) scale(1);
+}
+
+    .youtube_button:hover {
+        transform: translateY(-100%) scale(1);
+        -webkit-transform: translateY(-100%) scale(1);
+        -moz-transform: translateY(-100%) scale(1);
+        -ms-transform: translateY(-100%) scale(1);
+        -o-transform: translateY(-100%) scale(1);
+}
+
+    .left_input {
+        margin-right: 0%;
+    }
+
+    .menor_width {
+        width: 100%;
+    }
+
+    .p0, .p2 {
+        font-size: 3.6vh;
+    }
+
+    .dev_call {
+        display: block;
+        margin-top: 3vh;
+    }
+
+    .desenvolvimento {
+        width: 100%;
+        padding: 0 4vw 2vh 4vw;
+    }
+
+    .send {
+        font-size: 4vh;
+    }
+
+    .normal_input, .sobre_contato form textarea {
+        margin: 0 0 0.7vh 0;
+    }
+
+    .go_to_email_button {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 3vh;
+    }
+
+    .dev_call {
+        text-align: center;
+        font-size: 3vh;
+    }
+
+    .product_info_container span {
+        font-size: 2.4vw;
+    }
+
+    .sec_subtitulo {
+        padding: 1vw 2vw;
+    }
+}
