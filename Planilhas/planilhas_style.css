@@ -113,7 +113,6 @@ section {
     margin: 0 auto;
     display: block;
     left: 50%;
-    transform: translateX(-50%) scale(0.9);
     transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55), filter 0.3s ease;
     -webkit-transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55), filter 0.3s ease;
     -webkit-transform: translateX(-50%) scale(0.9);
@@ -124,16 +123,6 @@ section {
     -ms-transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55), filter 0.3s ease;
     -o-transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55), filter 0.3s ease;
 }
-.big_price form:hover {
-    transform: translateX(-50%) scale(1.1);
-    -webkit-transform: translateX(-50%) scale(1.1);
-    -moz-transform: translateX(-50%) scale(1.1);
-    -ms-transform: translateX(-50%) scale(1.1);
-    -o-transform: translateX(-50%) scale(1.1);
-    filter: drop-shadow( 0 10px 40px white);
-    -webkit-filter: drop-shadow( 0 10px 40px white);
-}
-
 .big_price > div > h2 span {
     font-size: 4vh;
     position: absolute;
