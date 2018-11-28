@@ -1,3 +1,9 @@
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.body.style.opacity = 1
+});
+
+
 const header = document.querySelector('header');
 const h1 = document.querySelector('.h1_container h1');
 const h1Span = document.querySelector('.h1_container h1 span');
@@ -7,23 +13,30 @@ const headerContactContainerSpan = document.querySelector('.header_contact_conta
 const goTop = document.querySelector('.go_top');
 
 document.body.onscroll = function() {
-    if(window.pageYOffset > (window.innerHeight / 3)) {
-        header.classList.add('header_shrink')
-        h1.classList.add('h1_shrink')
-        h1Span.classList.add('h1Span_shrink')
-        headerContactContainer.classList.add('header_contact_shrink')
-        headerContactContainerSpan.classList.add('header_contact_span_shrink')
-        goTop.classList.add('go_top_show')
-    } else {
-        header.classList.remove('header_shrink')
-        h1.classList.remove('h1_shrink')
-        h1Span.classList.remove('h1Span_shrink')
-        headerContactContainer.classList.remove('header_contact_shrink')
-        headerContactContainerSpan.classList.remove('header_contact_span_shrink')
-        goTop.classList.remove('go_top_show')
-    }
 
-    
+if (window.matchMedia("(max-width: 90vh)").matches) {
+        if(window.pageYOffset > (window.innerHeight / 3)) {
+            goTop.classList.add('go_top_show')
+        } else {
+            goTop.classList.remove('go_top_show')
+        }
+    } else {
+        if(window.pageYOffset > (window.innerHeight / 3)) {
+            header.classList.add('header_shrink')
+            h1.classList.add('h1_shrink')
+            h1Span.classList.add('h1Span_shrink')
+            headerContactContainer.classList.add('header_contact_shrink')
+            headerContactContainerSpan.classList.add('header_contact_span_shrink')
+            goTop.classList.add('go_top_show')
+        } else {
+            header.classList.remove('header_shrink')
+            h1.classList.remove('h1_shrink')
+            h1Span.classList.remove('h1Span_shrink')
+            headerContactContainer.classList.remove('header_contact_shrink')
+            headerContactContainerSpan.classList.remove('header_contact_span_shrink')
+            goTop.classList.remove('go_top_show')
+        }
+    }
 }
 
 function goToTop() {

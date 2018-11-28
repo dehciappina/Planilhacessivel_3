@@ -6,6 +6,12 @@ body {
     margin:0;
     font-family: 'Roboto', sans-serif;
     color: teal;
+    opacity:0;
+    transition:1s ease;
+    -webkit-transition:1s ease;
+    -moz-transition:1s ease;
+    -ms-transition:1s ease;
+    -o-transition:1s ease;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -78,28 +84,6 @@ header {
     -ms-transition: 0.4s ease;
     -o-transition: 0.4s ease;
 }
-
-        .header_shrink {
-            height: 14.6vh !important;
-        }
-
-        .h1_shrink {
-            top: 3vh !important;
-            font-size: 3vh !important;
-            line-height: 5vh !important;
-        }
-
-        .h1Span_shrink {
-            font-size: 5vh !important;
-        }
-
-        .header_contact_shrink {
-            top: 3vh !important;
-        }
-
-        .header_contact_span_shrink {
-            display:none !important;
-        }
 
 .h1_container {
     height: 100%;
@@ -277,9 +261,8 @@ header {
 .product_img_container {
     position: relative;
     height: 100%;
-    width: calc(20vh + 10vw);
+    width: 30vw;
     display: inline-block;
-    margin: 0 4%;
 }
 
     .product_img_container img {
@@ -305,6 +288,7 @@ header {
         display: inline-block;
         text-shadow: 0 0.5vh #EEE;
         padding-right: 2vh;
+        white-space: nowrap;
     }
     .product_info_container h4 {
         font-size: calc(2.8vw + 4px);
@@ -337,6 +321,16 @@ header {
         display: inline-block;
         position: relative;
     }
+
+    
+    .free_download {
+        border-radius: 10vh 0 0 10vh;
+        -webkit-border-radius: 10vh 0 0 10vh;
+        -moz-border-radius: 10vh 0 0 10vh;
+        -ms-border-radius: 10vh 0 0 10vh;
+        -o-border-radius: 10vh 0 0 10vh;
+    }
+
 
     .see_more {
         background: white;
@@ -387,7 +381,7 @@ header {
     }
 
     .free_download:hover, .see_more:hover, .fixed_exit_bt:hover {
-        box-shadow: inset 0 0 0 0.4vh;
+        box-shadow: inset 0 0 0 0.6vh;
     }
 
     .sobre_contato, .desenvolvimento {
@@ -731,6 +725,28 @@ header {
 
 
 
+    .header_shrink {
+        height: 14.6vh !important;
+    }
+
+    .h1_shrink {
+        top: 3vh !important;
+        font-size: 3vh !important;
+        line-height: 5vh !important;
+    }
+
+    .h1Span_shrink {
+        font-size: 5vh !important;
+    }
+
+    .header_contact_shrink {
+        top: 3vh !important;
+    }
+
+    .header_contact_span_shrink {
+        display:none !important;
+    }
+
 
 
 
@@ -807,6 +823,18 @@ header {
     .header_contact_container {
         display:none;
     }
+    
+    .credit_box {
+        display: block;
+        margin: 3vh 0;
+    }
+
+    .credit_box > div {
+        display: block;
+        width: 80%;
+        padding: 4vh;
+        margin: 0 auto 5vh auto;
+    }
 }
 
 
@@ -830,6 +858,7 @@ header {
     .product_img_container {
         display: block;
         margin: 0 auto;
+        width: unset;
     }
 
     .right_gradient {
@@ -852,7 +881,7 @@ header {
 
     .intro h3 {
         text-align: right;
-        font-size: 4vw;
+        font-size: 3.6vw;
     }
 
     .intro {
@@ -868,6 +897,8 @@ header {
         right: unset;
         width: 60%;
         box-sizing: border-box;
+        background: teal;
+        color: white;
         text-align: center;
     }
 
@@ -887,16 +918,33 @@ header {
     .product_info_container h3 {
         font-size: 5vh;
         padding-right: unset;
+        white-space: initial;
     }
 
     .free_download, .see_more {
-        font-size: 3vh;
-        padding: 0 4vw;
+        font-size: 4.5vw;
+        padding: 0;
+        width: 45%;
+    }
+    
+    .see_more {
+        border-radius: 0 10vh 10vh 0;
+        -webkit-border-radius: 0 10vh 10vh 0;
+        -moz-border-radius: 0 10vh 10vh 0;
+        -ms-border-radius: 0 10vh 10vh 0;
+        -o-border-radius: 0 10vh 10vh 0;
+        box-shadow: inset 0 0 0 0.6vh;
+    }
+
+    .free_download::after {
+        left: 7%;
+        width: 4.5vw;
+        top: 5%;
     }
 
     .h1_container img {
-        height: 50%;
-        top: 25%;
+        height: 62%;
+        top: 19%;
     }
 
     .h1_container h1 span {
@@ -927,18 +975,19 @@ header {
     }
 
     .intro h2 {
-        margin: 18vh 0 10vh 0;
+        margin: 18vh 0 5vh 0;
     }
 
     .side_gif {
-        width: 68%;
+        box-shadow: none;
+        width: 100%;
         float: none;
         position: relative;
         bottom: unset;
         top: 0;
         left: 0;
         right: 0;
-        margin: 3vh auto;
+        margin: 4vh 0;
         display: block;
     }
 
@@ -980,7 +1029,9 @@ header {
     }
 
     .p0, .p2 {
-        font-size: 3.6vh;
+        font-size: calc(1.5vh + 3vw);
+        margin-bottom: 0;
+        margin-top: 5vw;
     }
 
     .dev_call {
@@ -1005,16 +1056,18 @@ header {
         display: block;
         margin: 0 auto;
         text-align: center;
-        font-size: 3vh;
+        font-size: 4.8vw;
+        margin-top: 3vh;
     }
 
     .dev_call {
         text-align: center;
-        font-size: 3vh;
+        font-size: 5vw;
+        text-decoration: underline;
     }
 
     .product_info_container span {
-        font-size: 2.4vw;
+        font-size: 4vw;
     }
 
     .sec_subtitulo {
@@ -1022,15 +1075,7 @@ header {
         margin: 2vh 0;
     }
 
-    .credit_box {
-        display: block;
-        margin: 3vh 0;
-    }
-
-    .credit_box > div {
-        display: block;
-        width: 80%;
-        padding: 4vh;
-        margin: 0 auto 5vh auto;
+    .sobre_contato form {
+        margin-bottom: 0;
     }
 }
