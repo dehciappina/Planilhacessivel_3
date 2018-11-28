@@ -45,10 +45,6 @@ p, h1, h2, h3, h4, h5, h6 {
     background-attachment: fixed;
 }
 
-.intro {
-
-}
-
 .right_gradient, .left_gradient {
     height: 100%;
     width: 2vh;
@@ -323,24 +319,63 @@ header {
     }
 
     .product_info_container a, .fixed_exit_bt {
-        position: relative;
         color: inherit;
-        display: inline-block;
-        font-size: calc(0.5vw + 10px);
-        background: white;
         text-decoration: none;
-        padding: 1.5vh 3vw;
         box-sizing: border-box;
-        transition: 0.3s ease;
-        -webkit-transition: 0.3s ease;
-        -moz-transition: 0.3s ease;
-        -ms-transition: 0.3s ease;
-        -o-transition: 0.3s ease;
+        transition: 0.3s cubic-bezier(0, 0, 0.2, 1);
+        -webkit-transition: 0.3s cubic-bezier(0, 0, 0.2, 1);
+        -moz-transition: 0.3s cubic-bezier(0, 0, 0.2, 1);
+        -ms-transition: 0.3s cubic-bezier(0, 0, 0.2, 1);
+        -o-transition: 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+    .free_download, .see_more {
+        font-size: calc(0.5vw + 10px);
+        padding: 0 3vw;
+        height: 7vh;
+        line-height: 7vh;
+        display: inline-block;
+        position: relative;
+    }
+
+    .see_more {
+        background: white;
+    }
+
+    
+    .play_btn {
+        background: rgba(255, 255, 255, 0.5);
+        height: 7vh;
+        width: 12vh;
+        margin-left: 0vh;
+        display: inline-block;
+        position: absolute;
+        border-radius: 0 8vh 8vh 0;
+        -webkit-border-radius: 0 8vh 8vh 0;
+        -moz-border-radius: 0 8vh 8vh 0;
+        -ms-border-radius: 0 8vh 8vh 0;
+        -o-border-radius: 0 8vh 8vh 0;
+        transition: 0.15s ease;
+        -webkit-transition: 0.15s ease;
+        -moz-transition: 0.15s ease;
+        -ms-transition: 0.15s ease;
+        -o-transition: 0.15s ease;
+}
+
+    .play_btn img {
+        position: relative;
+        top: 25%;
+        height: 50%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .play_btn:hover {
+        width: 15vh;
     }
 
 
     .product_info_container span {
-        display: block;
         letter-spacing: 0.2vw;
         color: inherit;
         font-size: calc(0.6vw + 6px);
@@ -351,7 +386,7 @@ header {
         display: inline-block;
     }
 
-    .product_info_container a:hover, .fixed_exit_bt:hover {
+    .free_download:hover, .see_more:hover, .fixed_exit_bt:hover {
         box-shadow: inset 0 0 0 0.4vh;
     }
 
@@ -631,10 +666,10 @@ header {
     .free_download::after {
         content: url(assets/download_bt.svg);
         position: absolute;
-        width: 1.2vw;
+        width: calc(0.5vw + 2vh);
         display: inline-block;
         left: 1vw;
-        top: 30%;
+        top: 10%;
     }
 
     .credit_box {
@@ -656,6 +691,50 @@ header {
     .credit_box > div:first-child {
         margin-right: 3%;
     }
+
+    .go_top {
+        padding: 3vh 2vh;
+        box-sizing: border-box;
+        position: fixed;
+        background: rgba(0, 128, 128, 0.7);
+        width: 9vh;
+        height: 14vh;
+        border-radius: 10vh 10vh 0 0;
+        bottom: 0;
+        right: 1vh;
+        cursor: pointer;
+        opacity:0;
+        visibility: hidden;
+        transition:0.2s ease;
+        -webkit-transition:0.2s ease;
+        -moz-transition:0.2s ease;
+        -ms-transition:0.2s ease;
+        -o-transition:0.2s ease;
+}
+
+    .go_top:hover {
+        transform:translateY(1vh)    ;
+        -webkit-transform:translateY(1vh)    ;
+        -moz-transform:translateY(1vh)    ;
+        -ms-transform:translateY(1vh)    ;
+        -o-transform:translateY(1vh)    ;
+}
+
+    .go_top_show {
+        opacity:1;
+        visibility: visible;
+    }
+
+    .go_top img {
+        transform: rotate(180deg);
+    }
+
+
+
+
+
+
+
 
 
 
@@ -735,6 +814,13 @@ header {
 
 @media screen and (max-width: 90vh) { 
 
+    .play_btn {
+        display: block;
+        position: relative;
+        margin: 3vh auto;
+        border-radius: 1vh;
+        background: white;
+    }
     .planilha {
         height: auto;
         display: block;
@@ -803,10 +889,9 @@ header {
         padding-right: unset;
     }
 
-    .product_info_container a {
-        margin: 0 auto 3vh auto;
+    .free_download, .see_more {
         font-size: 3vh;
-        padding: 1.5vh 4vw;
+        padding: 0 4vw;
     }
 
     .h1_container img {
@@ -815,14 +900,16 @@ header {
     }
 
     .h1_container h1 span {
-        font-size: 4.8vh;
+        font-size: 5.5vh;
     }
 
     .h1_container h1 {
-        font-size: 2.4vh;
+        font-size: 2.6vh;
+        text-align: center;
         line-height: 4vh;
         top: 4vh;
-        left: 2vh;
+        left: 0;
+        margin-left: 4vh;
         font-weight: 300;
     }
 
@@ -834,7 +921,9 @@ header {
     }
 
     .h1_container {
-        padding-left: 5%;
+        padding-left: 0;
+        margin: 0 auto;
+        min-width: unset;
     }
 
     .intro h2 {
@@ -863,7 +952,7 @@ header {
         position: relative;
         margin: 0 auto -10vh;
         right: unset;
-        bottom: 0;
+        top: 0;
         transform: translateY(-100%) scale(1);
         float: none;
         width: 21vh;
@@ -930,5 +1019,18 @@ header {
 
     .sec_subtitulo {
         padding: 1vw 2vw;
+        margin: 2vh 0;
+    }
+
+    .credit_box {
+        display: block;
+        margin: 3vh 0;
+    }
+
+    .credit_box > div {
+        display: block;
+        width: 80%;
+        padding: 4vh;
+        margin: 0 auto 5vh auto;
     }
 }
