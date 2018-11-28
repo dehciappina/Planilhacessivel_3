@@ -288,7 +288,6 @@ header {
         display: inline-block;
         text-shadow: 0 0.5vh #EEE;
         padding-right: 2vh;
-        white-space: nowrap;
     }
     .product_info_container h4 {
         font-size: calc(2.8vw + 4px);
@@ -870,18 +869,21 @@ header {
         font-weight: 300;
         margin: 3vh 0 5vh 0;
         color: teal;
-        padding: 0 5vh;
+        padding: 0 2vh;
         box-sizing: border-box;
     }
 
     .intro h2 {
         text-align: left;
-        font-size: 5.4vw;
+        font-size: 5.5vw;
+        font-weight: 400;
     }
-
+    .intro h2 strong {
+        font-weight: 600;
+    }
     .intro h3 {
         text-align: right;
-        font-size: 3.6vw;
+        font-size: 5vw;
     }
 
     .intro {
@@ -895,11 +897,13 @@ header {
         display: block;
         margin: 2vh auto;
         right: unset;
-        width: 60%;
         box-sizing: border-box;
         background: teal;
         color: white;
         text-align: center;
+        min-width: 60%;
+        max-width: 80%;
+        border-radius: 10vh;
     }
 
     .see_products::after {
@@ -913,18 +917,17 @@ header {
     }
 
     .product_info_container h4 {
-        font-size: 5vh;
+        font-size: 7vw;
     }
     .product_info_container h3 {
         font-size: 5vh;
         padding-right: unset;
-        white-space: initial;
     }
 
     .free_download, .see_more {
         font-size: 4.5vw;
         padding: 0;
-        width: 45%;
+        width: 48%;
     }
     
     .see_more {
@@ -937,8 +940,8 @@ header {
     }
 
     .free_download::after {
-        left: 7%;
-        width: 4.5vw;
+        left: 2vw;
+        width: 4vw;
         top: 5%;
     }
 
@@ -948,16 +951,16 @@ header {
     }
 
     .h1_container h1 span {
-        font-size: 5.5vh;
+        font-size: 8vw;    
     }
 
     .h1_container h1 {
-        font-size: 2.6vh;
+        font-size: 4vw;
         text-align: center;
         line-height: 4vh;
         top: 4vh;
         left: 0;
-        margin-left: 4vh;
+        margin-left: 5vw;
         font-weight: 300;
     }
 
