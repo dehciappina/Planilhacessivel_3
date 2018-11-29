@@ -20,7 +20,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 
 .bg {
-    position: fixed;
+    position: absolute;
     top: 0;
     right:0;
     left: 0;
@@ -35,9 +35,9 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .bg2 {
-    background-image: url(assets/bg.jpg);
+    background-image: url(assets/bg.png);
     background-size: cover;
-    opacity: 0.1;
+    opacity: 0.15;
     background-position-y: 70%;
 }
 
@@ -204,7 +204,6 @@ header {
 .about_button, .see_products {
     position: absolute;
     right: 12vw;
-    box-shadow: inset 0 0 0 0.3vh teal;
     font-size: 3vh;
     height: 6vh;
     line-height: 6vh;
@@ -212,6 +211,8 @@ header {
 }
 
 .about_button {
+    background: teal;
+    color: white;
     top: 68vh;
     width: 15vw;
     text-align: center;
@@ -222,19 +223,25 @@ header {
     -o-transition:0.2s ease;
 }
 
-.about_button:hover, .see_products:hover {
+ .see_products:hover {
     background: teal;
     color: white;
 }
 
+.about_button:hover {
+    background: #00A3A3;
+}
+
 .see_products {
+    background: rgba(255,255,255,0.7);
+    box-shadow: inset 0 0 0 0.3vh teal;
     top: 78vh;
     padding: 0 2vw;
-    transition: 0.2s ease;
-    -webkit-transition: 0.2s ease;
-    -moz-transition: 0.2s ease;
-    -ms-transition: 0.2s ease;
-    -o-transition: 0.2s ease;
+    transition: background 0.2s ease, color 0.2s ease;
+    -webkit-transition: background 0.2s ease, color 0.2s ease;
+    -moz-transition: background 0.2s ease, color 0.2s ease;
+    -ms-transition: background 0.2s ease, color 0.2s ease;
+    -o-transition: background 0.2s ease, color 0.2s ease;
 }
 
 .see_products::after {
@@ -261,7 +268,7 @@ header {
 .product_img_container {
     position: relative;
     height: 100%;
-    width: 30vw;
+    width: calc(40vw - 200px);
     display: inline-block;
 }
 
@@ -305,16 +312,16 @@ header {
         color: inherit;
         text-decoration: none;
         box-sizing: border-box;
-        transition: 0.3s cubic-bezier(0, 0, 0.2, 1);
-        -webkit-transition: 0.3s cubic-bezier(0, 0, 0.2, 1);
-        -moz-transition: 0.3s cubic-bezier(0, 0, 0.2, 1);
-        -ms-transition: 0.3s cubic-bezier(0, 0, 0.2, 1);
-        -o-transition: 0.3s cubic-bezier(0, 0, 0.2, 1);
+        transition: 0.2s cubic-bezier(0, 0, 0.2, 1);
+        -webkit-transition: 0.2s cubic-bezier(0, 0, 0.2, 1);
+        -moz-transition: 0.2s cubic-bezier(0, 0, 0.2, 1);
+        -ms-transition: 0.2s cubic-bezier(0, 0, 0.2, 1);
+        -o-transition: 0.2s cubic-bezier(0, 0, 0.2, 1);
 }
 
     .free_download, .see_more {
-        font-size: calc(0.5vw + 10px);
-        padding: 0 3vw;
+        font-size: calc(0.2vw + 2.5vh);
+        padding: 0 4vw;
         height: 7vh;
         line-height: 7vh;
         display: inline-block;
@@ -364,7 +371,8 @@ header {
     }
 
     .play_btn:hover {
-        width: 15vh;
+        background: white;
+        transform: translateX(10%);
     }
 
 
@@ -829,7 +837,6 @@ header {
     }
 
     .credit_box > div {
-        display: block;
         width: 80%;
         padding: 4vh;
         margin: 0 auto 5vh auto;
@@ -875,11 +882,12 @@ header {
 
     .intro h2 {
         text-align: left;
-        font-size: 5.5vw;
+        font-size: 5.7vw;
+        line-height: 8vw;
         font-weight: 400;
     }
     .intro h2 strong {
-        font-weight: 600;
+        font-weight: 400;
     }
     .intro h3 {
         text-align: right;
@@ -901,9 +909,10 @@ header {
         background: teal;
         color: white;
         text-align: center;
-        min-width: 60%;
-        max-width: 80%;
+        min-width: 37%;
+        max-width: 62%;
         border-radius: 10vh;
+        font-size: 4.5vw;
     }
 
     .see_products::after {

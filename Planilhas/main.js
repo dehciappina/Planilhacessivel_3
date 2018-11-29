@@ -5,15 +5,31 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-        document.querySelector('.price_tag').style.transform = "translateY( -" + (window.pageYOffset / 50) + "vh)"
+if (window.matchMedia("(max-width: 90vh)").matches) {
 
-        document.querySelector('.planilha').style.transform = "translateY(" + (window.pageYOffset / 25) + "vh)"   
+    document.querySelector('.see_more').innerHTML = "Página Inicial";
+    document.querySelector('#pagseguro_form_input').style.width = 55 + 'vw';
 
     document.body.onscroll = function() {
+        
+        if(window.pageYOffset > 0) {
+            goTop.classList.add('go_top_show')
+        } else {
+            goTop.classList.remove('go_top_show')
+        }
+    }
 
-        document.querySelector('.price_tag').style.transform = "translateY( -" + (window.pageYOffset / 50) + "vh)";
-    
-        document.querySelector('.planilha').style.transform = "translateY(" + (window.pageYOffset / 25) + "vh)";
+} else {
+
+    document.querySelector('.price_tag').style.transform = "translateY( -" + (window.pageYOffset / (document.body.clientHeight / 20)) + "vw)"
+
+    document.querySelector('.planilha').style.transform = "translateY(" + (window.pageYOffset / 4) + "px)"   
+
+
+    document.body.onscroll = function() {
+        document.querySelector('.price_tag').style.transform = "translateY( -" + (window.pageYOffset / (document.body.clientHeight / 20)) + "vw)"
+
+        document.querySelector('.planilha').style.transform = "translateY(" + (window.pageYOffset / 4) + "px)";
     
         
         if(window.pageYOffset > (window.innerHeight / 3)) {
@@ -22,6 +38,8 @@ document.addEventListener("DOMContentLoaded", function() {
             goTop.classList.remove('go_top_show')
         }
     }
+
+}
     
 const goTop = document.querySelector('.go_top');
 

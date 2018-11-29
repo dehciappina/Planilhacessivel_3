@@ -14,7 +14,11 @@ const goTop = document.querySelector('.go_top');
 
 document.body.onscroll = function() {
 
-if (window.matchMedia("(max-width: 90vh)").matches) {
+    
+    document.querySelector('.bg2').style.transform = "translateY(" + (window.pageYOffset / 1.25) + "px)";
+    
+
+    if (window.matchMedia("(max-width: 90vh)").matches) {
         if(window.pageYOffset > (window.innerHeight / 3)) {
             goTop.classList.add('go_top_show')
         } else {

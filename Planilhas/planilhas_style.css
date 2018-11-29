@@ -75,14 +75,14 @@ p, h1, h2, h3, h4, h5, h6 {
     display: table;
 }
 
-    .product_info_container h3 {
+    .product_info_container h1 {
         font-size: calc(1vw + 4.5vh);
         font-weight: 400;
         display: inline-block;
         text-shadow: 0 0.5vh #EEE;
         padding-right: 2vh;
     }
-    .product_info_container h4 {
+    .product_info_container h2 {
         font-size: calc(2.8vw + 4px);
         font-weight: 300;
         color: inherit;
@@ -90,7 +90,7 @@ p, h1, h2, h3, h4, h5, h6 {
         text-shadow: 0 0.6vh 0.8vh #FFF;
     }
     
-    .product_info_container h4 strong {
+    .product_info_container h2 strong {
         font-weight: 400;
     }
 
@@ -163,7 +163,8 @@ p, h1, h2, h3, h4, h5, h6 {
     }
 
     .play_btn:hover {
-        width: 15vh;
+        background: white;
+        transform: translateX(10%);
     }
 
 
@@ -183,30 +184,6 @@ p, h1, h2, h3, h4, h5, h6 {
     }
 
 
-.bg {
-    position: fixed;
-    top: 0;
-    right:0;
-    left: 0;
-    bottom:0;
-    z-index: -1;
-}
-
-.bg2 {
-    background-image: url(assets/bg.jpg);
-    background-size: cover;
-    opacity: 0.1;
-    background-position-y: 70%;
-}
-
-.big_bg {
-    position: fixed;
-    z-index: -1;
-    height: 100%;
-    right: 5%;
-    transform: rotate(5deg);
-    opacity: 0.15;
-}
 
 .info_box_section {
     width: 74%;
@@ -291,10 +268,11 @@ p, h1, h2, h3, h4, h5, h6 {
     background-size: 50%;
 }
 
-.big_price > p {
+.big_price > span {
     font-size: 1.3vw;
     font-weight: 400;
     position: relative;
+    display: block;
 }
 
 .apenas {
@@ -307,6 +285,9 @@ p, h1, h2, h3, h4, h5, h6 {
     position: relative;
     margin: 0 auto;
     width: 60%;
+    font-size: 2vw;
+    font-weight: 600;
+    line-height: 4vw;
 }
 .envio {
     text-align: center;
@@ -314,12 +295,7 @@ p, h1, h2, h3, h4, h5, h6 {
     margin-bottom: 2vh;
 }
 
-.big_price > div > p {
-    font-size: 2vw;
-    font-weight: 600;
-    margin: 2vh 0 -3vh 0;
-}
-.big_price > div > h2 {
+.valor {
     font-size: 7vw;
     font-weight: 500;
 }
@@ -330,7 +306,7 @@ p, h1, h2, h3, h4, h5, h6 {
     display: block;
     width: fit-content;
 }
-.big_price > div > h2 span {
+.valor span {
     font-size: 4vh;
     position: absolute;
     transform: translateY(50%);
@@ -452,3 +428,180 @@ p, h1, h2, h3, h4, h5, h6 {
     background: teal;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 90vh) { 
+
+    .planilha {
+        display: block;
+        height: auto;
+        padding:5vh 0;
+    }
+
+    .product_img_container {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        height: 60%;
+    }
+
+    .product_img_container img {
+        width: 30%;
+    }
+
+    .product_info_container {
+        width: 95%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .product_info_container h1 {
+        font-size: 5vh;
+        padding-right: unset;
+    }
+
+    .product_info_container h2 {
+        font-size: 7vw;
+    }
+    
+    .product_info_container span {
+        font-size: 4vw;
+    }
+    
+    .free_download, .see_more {
+        font-size: 4.5vw;
+        padding: 0;
+        width: 48%;
+    }
+    
+    .see_more {
+        border-radius: 0 10vh 10vh 0;
+        -webkit-border-radius: 0 10vh 10vh 0;
+        -moz-border-radius: 0 10vh 10vh 0;
+        -ms-border-radius: 0 10vh 10vh 0;
+        -o-border-radius: 0 10vh 10vh 0;
+        box-shadow: inset 0 0 0 0.6vh;
+    }
+
+    .free_download::after {
+        left: 2vw;
+        width: 4vw;
+        top: 5%;
+    }
+
+    .info_box_section {
+        margin: 5vh auto;
+        display: block;
+        width: 90%;
+    }
+
+
+    .info_box {
+        width: 47%;
+        height: 44vw;
+        border-radius: 0;
+        padding: 0 1vw;
+        margin: 1vw;
+        box-shadow: none;
+        background: ghostwhite;
+    }
+
+    .info_box p {
+        font-size: 5vw;
+    }
+
+    .big_info_box {
+        width: 97%;
+        height: 32vw;
+        padding: 0 2vh;
+    }
+
+    .go_top {
+        right: 5%;
+        z-index: 1;
+    }
+
+    .price_tag {
+        width: 100%;
+        margin: 0;
+        position: relative;
+        bottom: 0;
+        display: block;
+    }
+    .big_price {
+        width: 62vw;
+        height: 50vh;
+        margin: 10vh auto;
+    }
+    .big_price > span {
+        font-size: 5.5vw;
+    }
+    .envio {
+        margin-bottom: 2vh;
+    }
+    .big_price > div {
+        width: 62%;
+        font-size: 8vw;
+        line-height: 18vw;
+        margin: 0 auto;
+    }
+    .valor {
+        font-size: 27vw;
+    }
+    .valor span {
+        font-size: 6vw;
+        transform: translateY(-50%);
+    }
+    .play_btn {
+        position: relative;
+        border-radius: 1vh;
+        margin: 2vh auto;
+        width: 62vw;
+        background: white;
+    }
+    .yt_info_box {
+        width: 100%;
+    }
+
+    .apenas {
+        width: 90%;
+    }
+}
