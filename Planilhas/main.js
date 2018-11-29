@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function() {
 if (window.matchMedia("(max-width: 90vh)").matches) {
 
     document.querySelector('.see_more').innerHTML = "Página Inicial";
-    document.querySelector('#pagseguro_form_input').style.width = 55 + 'vw';
 
     document.body.onscroll = function() {
         
@@ -20,6 +19,7 @@ if (window.matchMedia("(max-width: 90vh)").matches) {
     }
 
 } else {
+    document.querySelector('#pagseguro_form_input').style.width = 15 + 'vw';
 
     document.querySelector('.price_tag').style.transform = "translateY( -" + (window.pageYOffset / (document.body.clientHeight / 20)) + "vw)"
 

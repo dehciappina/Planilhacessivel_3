@@ -82,3 +82,12 @@ function goToMailArea() {
 
 goToMail.addEventListener('click', goToMailArea)
 
+
+
+setInterval(function() {
+    if(document.title == "8 Soluções em Planilhas do Excel que Otimizarão o seu Negócio") {
+        document.title = "Planilhacessível - Soluções em Planilhas do Excel"
+    } else {
+        document.title = "8 Soluções em Planilhas do Excel que Otimizarão o seu Negócio"
+    }
+}, 2000)

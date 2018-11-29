@@ -260,7 +260,7 @@ header {
 
 .planilha {
     width: 100%;
-    height: 52vh;
+    height: 23vw;
     display: flex;
 }
 
@@ -268,13 +268,13 @@ header {
 .product_img_container {
     position: relative;
     height: 100%;
-    width: calc(40vw - 200px);
+    width: 30vw;
     display: inline-block;
 }
 
     .product_img_container img {
-        height: 70%;
-        width: 26vh;
+        height: 60%;
+        width: 24vh;
         margin: 0 auto;
         display: block;
         position: relative;
@@ -335,8 +335,21 @@ header {
         -moz-border-radius: 10vh 0 0 10vh;
         -ms-border-radius: 10vh 0 0 10vh;
         -o-border-radius: 10vh 0 0 10vh;
+        box-shadow: inset 0 0 0 0, inset 0 0 0 100px;
     }
 
+    .free_download p {
+        color:white;
+        font-weight: 400;
+    }
+
+    .see_more:hover, .fixed_exit_bt:hover {
+        box-shadow: inset 0 0 0 0.6vh ;
+    }
+
+    .free_download:hover {
+        box-shadow: inset 0 0 0 0.6vh white, inset 0 0 0 100px;
+    }
 
     .see_more {
         background: white;
@@ -387,9 +400,6 @@ header {
         display: inline-block;
     }
 
-    .free_download:hover, .see_more:hover, .fixed_exit_bt:hover {
-        box-shadow: inset 0 0 0 0.6vh;
-    }
 
     .sobre_contato, .desenvolvimento {
         margin: 0 auto;
@@ -765,27 +775,39 @@ header {
 
 #pcf {
     background: rgba(0, 191, 255, 0.15);
+    color:#008080;
 }
 #car {
     background: rgba(255, 49, 0, 0.15);
+    color:#ff4500;
 }
 #oc {
     background: rgba(103, 93, 198, 0.2);
+    color:#675dc6;
 }
 #aef {
     background: rgba(255, 255, 0, 0.25);
+    color:#ffb839;
 }
 #per {
     background: rgba(255, 90, 0, 0.2);
+    color:#B83500;
 }
 #lrlp {
     background: rgba(0, 255, 0, 0.2);
+    color:forestgreen;
 }
 #cfa {
     background: rgba(0, 191, 255, 0.1);
+    color:deepskyblue;
 }
 #perl {
     background: rgba(214, 0, 87, 0.15);
+    color:#d60057;
+}
+#pend {
+    background: rgba(173, 255, 47, 0.3);
+    color: #8FBB15;
 }
 
 /* SCROLLBAR */
