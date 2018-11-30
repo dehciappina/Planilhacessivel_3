@@ -1,6 +1,8 @@
 
 document.addEventListener("DOMContentLoaded", function() {
-    document.body.style.opacity = 1
+    setTimeout(function() {
+        document.body.style.opacity = 1
+    }, 50)
 });
 
 
@@ -44,7 +46,7 @@ document.body.onscroll = function() {
 }
 
 function goToTop() {
-    let calc = (- window.pageYOffset / 30) - 3
+    let calc = (- window.pageYOffset / 100) - 30
     if (window.pageYOffset > 0) {
         window.scrollBy(0, calc);
         setTimeout(goToTop, 0);

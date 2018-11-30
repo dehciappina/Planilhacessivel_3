@@ -1,7 +1,9 @@
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    document.body.style.opacity = 1
+    setTimeout(function() {
+        document.body.style.opacity = 1
+    }, 200)
 });
 
 
@@ -23,19 +25,21 @@ if (window.matchMedia("(max-width: 90vh)").matches) {
 
     document.querySelector('.price_tag').style.transform = "translateY( -" + (window.pageYOffset / (document.body.clientHeight / 20)) + "vw)"
 
-    document.querySelector('.planilha').style.transform = "translateY(" + (window.pageYOffset / 4) + "px)"   
+    // document.querySelector('.planilha').style.transform = "translateY(" + (window.pageYOffset / 4) + "px)"   
 
 
     document.body.onscroll = function() {
         document.querySelector('.price_tag').style.transform = "translateY( -" + (window.pageYOffset / (document.body.clientHeight / 20)) + "vw)"
 
-        document.querySelector('.planilha').style.transform = "translateY(" + (window.pageYOffset / 4) + "px)";
+        // document.querySelector('.planilha').style.transform = "translateY(" + (window.pageYOffset / 4) + "px)";
     
-        
         if(window.pageYOffset > (window.innerHeight / 3)) {
             goTop.classList.add('go_top_show')
+
+            document.querySelector('.price_tag').style.opacity = 1 
         } else {
             goTop.classList.remove('go_top_show')
+            
         }
     }
 

@@ -262,6 +262,8 @@ header {
     width: 100%;
     height: 23vw;
     display: flex;
+    background-size: contain !important;
+    background-attachment: fixed !important;
 }
 
 
@@ -293,7 +295,7 @@ header {
         font-size: calc(1vw + 4.5vh);
         font-weight: 400;
         display: inline-block;
-        text-shadow: 0 0.5vh #EEE;
+        color: white;
         padding-right: 2vh;
     }
     .product_info_container h4 {
@@ -301,7 +303,7 @@ header {
         font-weight: 300;
         color: inherit;
         margin: 2vh 0 3vh 0;
-        text-shadow: 0 0.6vh 0.8vh #FFF;
+        color: white;
     }
     
     .product_info_container h4 strong {
@@ -357,11 +359,13 @@ header {
 
     
     .play_btn {
-        background: rgba(255, 255, 255, 0.5);
+        background: #E45;
+        box-shadow: inset 0 0 0 0.7vh white;
         height: 7vh;
-        width: 12vh;
-        margin-left: 0vh;
-        display: inline-block;
+        width: 11vh;
+        margin-left: 0;
+        display: inline-flex;
+        font-size: 2vh;
         position: absolute;
         border-radius: 0 8vh 8vh 0;
         -webkit-border-radius: 0 8vh 8vh 0;
@@ -377,21 +381,20 @@ header {
 
     .play_btn img {
         position: relative;
-        top: 25%;
-        height: 50%;
+        top: 31%;
+        height: 38%;
         display: block;
         margin: 0 auto;
     }
 
     .play_btn:hover {
-        background: white;
         transform: translateX(10%);
     }
 
 
     .product_info_container span {
         letter-spacing: 0.2vw;
-        color: inherit;
+        color: white;
         font-size: calc(0.6vw + 6px);
         padding-bottom: 1vh;
         margin-bottom: 1vh;
@@ -774,40 +777,48 @@ header {
 /* IDs */
 
 #pcf {
-    background: rgba(0, 191, 255, 0.15);
     color:#008080;
+    background-image: url(assets/pcf_bg.jpg);
 }
 #car {
-    background: rgba(255, 49, 0, 0.15);
-    color:#ff4500;
+    color: #902600;
+    background-image: url(assets/car_bg.jpg);
 }
 #oc {
-    background: rgba(103, 93, 198, 0.2);
-    color:#675dc6;
+    background: rgba(103, 93, 198, 0.8);
+    background-image: url(assets/oc_bg.jpg);
+    color:#362C95;
 }
 #aef {
-    background: rgba(255, 255, 0, 0.25);
-    color:#ffb839;
+    background: rgba(255, 195, 0, 0.6);
+    color:#BA6800;
+    background-image: url(assets/aef_bg.jpg);
 }
 #per {
-    background: rgba(255, 90, 0, 0.2);
+    background: rgba(255, 110, 10, 0.6);
     color:#B83500;
+    background-image: url(assets/per_bg.jpg);
 }
+
 #lrlp {
-    background: rgba(0, 255, 0, 0.2);
+    background: rgba(0, 215, 110, 0.6);
     color:forestgreen;
+    background-image: url(assets/lrlp_bg.jpg);
 }
 #cfa {
-    background: rgba(0, 191, 255, 0.1);
+    background: rgba(0, 151, 195, 0.6);
     color:deepskyblue;
+    background-image: url(assets/cfa_bg.jpg);
 }
 #perl {
-    background: rgba(214, 0, 87, 0.15);
-    color:#d60057;
+    background: rgba(214, 0, 87, 0.6);
+    color:#FF0057;
+    background-image: url(assets/perl_bg.jpg);
 }
 #pend {
-    background: rgba(173, 255, 47, 0.3);
+    background: rgba(100, 155, 0, 0.6);
     color: #8FBB15;
+    background-image: url(assets/pend_bg.jpg);
 }
 
 /* SCROLLBAR */
@@ -875,7 +886,7 @@ header {
         position: relative;
         margin: 3vh auto;
         border-radius: 1vh;
-        background: white;
+        background: red;
     }
     .planilha {
         height: auto;
@@ -971,9 +982,9 @@ header {
     }
 
     .free_download::after {
-        left: 2vw;
-        width: 4vw;
-        top: 5%;
+        left: -5%;
+        width: 6vw;
+        top: -18%;
     }
 
     .h1_container img {
